@@ -11,6 +11,11 @@ public class Computador {
 
     Fabricante fabricante;
 
+    //Construtor
+
+    public Computador(){
+        memoriaRam = 4;
+    }
     //Métodos
 
     double calcularDesconto(double desconto){
@@ -35,5 +40,9 @@ public class Computador {
     void trocarHdeProcessador(String novoProcessador, int novoHd){
         processador = novoProcessador;
         espacoHd = novoHd;
+    }
+
+    void aumentarPreco(){
+        preco = preco + 100;
     }
 }
