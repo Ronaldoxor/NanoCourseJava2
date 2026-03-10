@@ -2,28 +2,28 @@ package br.com.fiap.model;
 
 public class App {
     public static void main(String[] args){
-        Computador pc = new Computador();
-        pc.modelo = "G5";
-        pc.marca = "Dell";
-        pc.espacoHd = 256;
-        pc.memoriaRam = 8;
-        pc.placaVideoDedicada = true;
-        pc.processador = "i7";
-        pc.preco = 5200.50;
-
-        Fabricante fabricante = new Fabricante();
-        fabricante.nome = "Dell";
-        fabricante.endereco = "Av Paulista, 1100";
-
-        pc.fabricante = fabricante;
 
         Computador note = new Computador();
         note.modelo = "Macbook Pro";
         note.marca = "Apple";
         note.placaVideoDedicada = false;
         note.espacoHd = 512;
-        note.memoriaRam = 16;
+        note.memoriaRam = 8;
         note.processador = "i5";
-        note.preco = 15000.00;
+        note.preco = 5000.00;
+
+        //Calcular 10% de desconto
+        double valorComDesconto = note.calcularDesconto(0.1);
+        System.out.println("Valor do Desconto: " + valorComDesconto);
+
+        //Adicionar 8 GB
+        boolean sucesso = note.adicionarMemoriaRam(8);
+        if (sucesso){
+            System.out.println("Memória RAM adicionada");
+            System.out.println("Quantidade de memória RAM: " + note.memoriaRam);
+            System.out.println("Novo valor do note: " + note.preco);
+        }else{
+            System.out.println("Não foi possível adicionar a memória");
+        }
     }
 }
