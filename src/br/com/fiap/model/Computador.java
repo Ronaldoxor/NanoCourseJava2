@@ -13,8 +13,22 @@ public class Computador {
 
     //Construtor
 
-    public Computador(){
-        memoriaRam = 4;
+    public Computador(String modelo, String marca, double preco, int memoriaRam, int espacoHd, String processador, boolean placaVideoDedicada, Fabricante fabricante){
+        this.modelo = modelo;
+        this.marca = marca;
+        this.preco = preco;
+        this.memoriaRam = memoriaRam;
+        this.espacoHd = espacoHd;
+        this.processador = processador;
+        this.placaVideoDedicada = placaVideoDedicada;
+        this.fabricante = fabricante;
+    }
+
+    public Computador(){};
+
+    public Computador(String modelo, String marca){
+        this.modelo = modelo;
+        this.marca = marca;
     }
     //Métodos
 
